@@ -1,0 +1,36 @@
+# 个人主页的自动更新
+
+这个仓库同时承担 GitHub 个人介绍和公开项目状态归档两项用途。
+
+## 主页内容
+
+根目录 `README.md` 展示个人介绍、三个代表项目和工作方法。介绍依据这些项目的公开文档整理，不包含未经提供的学历、任职或生产部署经历。
+
+`PROJECT-ACTIVITY` 标记之间的区域由脚本维护，只展示快照采集时间与项目的实际最新提交。编辑介绍正文时请保留这对标记。
+
+## 每日任务
+
+- 时区：Asia/Shanghai（北京时间）。
+- 每天 09:17 执行，15:17 和 21:17 补查；当天已有快照时不会重复采集。
+- `scripts/daily-snapshot.mjs` 保存公开仓库的默认分支最新提交、Star、Fork 和开放 issue/PR 数量。
+- `scripts/render-profile.mjs` 根据当天快照更新 README 的项目动态区。相同输入不会重复改写内容。
+- 原始数据保存在 `snapshots/YYYY/MM/YYYY-MM-DD.json`，不采集私有仓库，也不把个人主页仓库作为项目展示。
+- 自动提交只记录维护与元数据快照，不代表当日人工编码、学习完成或项目交付。
+- 仅使用仓库自带的 `GITHUB_TOKEN`，无需额外密钥；提交使用账号的 GitHub noreply 地址。
+
+GitHub 定时任务可能延迟或被跳过，不能保证永久零漏日。公开仓库连续 60 天没有活动时，定时工作流可能被停用；可在 Actions 页面重新启用。贡献图更新可能需要 24 小时。
+
+快照保留采集当时的数据；同一天稍后发生的 Star、Fork 等变化会在下一天的快照中体现。
+
+## 手动运行或停止
+
+打开仓库的 **Actions → Daily snapshot → Run workflow** 可手动运行。选择 **Disable workflow** 可停止每日自动更新。
+
+本地运行需要 Node.js 20 或更高版本：
+
+```sh
+node scripts/daily-snapshot.mjs
+node scripts/render-profile.mjs
+```
+
+只采集实际运行当天的数据，不回填历史日期。`GH_TOKEN` 可选；未设置时使用 GitHub 公共 API 的匿名额度。

@@ -30,16 +30,18 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           SNAPSHOT_OWNER: liguozheng-ac
         run: node scripts/daily-snapshot.mjs
-      - name: Commit daily snapshot
+      - name: Refresh profile project activity
+        run: node scripts/render-profile.mjs
+      - name: Publish profile and snapshot
         shell: bash
         run: |
           set -euo pipefail
-          git add snapshots/
+          git add README.md snapshots/
           if git diff --cached --quiet; then
-            echo "Today's snapshot already exists."
+            echo "Today's profile and snapshot are already current."
             exit 0
           fi
           git config user.name "liguozheng-ac"
           git config user.email "322033022+liguozheng-ac@users.noreply.github.com"
-          git commit -m "chore: automated public repository snapshot $(date +%F)"
+          git commit -m "chore: refresh profile project snapshot $(date +%F)"
           git push origin HEAD:main

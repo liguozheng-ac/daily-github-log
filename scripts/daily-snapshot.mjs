@@ -40,7 +40,7 @@ if (exists) {
   const repositories = [];
   for (let page = 1; ; page++) {
     const batch = await request(`/users/${owner}/repos?type=owner&sort=full_name&per_page=100&page=${page}`);
-    repositories.push(...batch.filter(repo => !repo.private && repo.name !== 'daily-github-log'));
+    repositories.push(...batch.filter(repo => !repo.private && !['daily-github-log', owner].includes(repo.name)));
     if (batch.length < 100) break;
   }
   const snapshots = [];

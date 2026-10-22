@@ -1,23 +1,41 @@
-# Daily GitHub Log
+# Hi, I'm Guozheng Li
 
-[![Daily snapshot](https://github.com/liguozheng-ac/daily-github-log/actions/workflows/daily-snapshot.yml/badge.svg)](https://github.com/liguozheng-ac/daily-github-log/actions/workflows/daily-snapshot.yml)
+**Chinese–Japanese Localization QA · Japanese Speech Data · Evaluation Tooling**
 
-每天自动保存公开 GitHub 仓库的状态快照，包括默认分支最新提交、星标、fork 和开放 issue/PR 数量。
+I build tools that make language and speech quality easier to inspect, evaluate, and review. My projects combine deterministic checks, model-assisted analysis, and explicit evidence for human decisions.
 
-这些提交由 GitHub Actions 自动生成，用于记录仓库状态，不代表当天的人工编码工作。
+专注中日游戏本地化 QA、日语语音数据质量与可解释的评估工具。
 
-- 时区：Asia/Shanghai（北京时间）。
-- 每天 09:17 执行，15:17 和 21:17 补查；当天已有快照时跳过，不重复提交。
-- 快照保存在 `snapshots/YYYY/MM/YYYY-MM-DD.json`，不采集私有仓库。
-- 使用仓库自带的 `GITHUB_TOKEN`，无需额外密钥，提交邮箱为账号的 GitHub noreply 地址。
-- 在 Actions → Daily snapshot → Run workflow 可以手动运行；Disable workflow 可以停止。
+### Selected projects
 
-GitHub 定时任务可能延迟或被跳过，因此不能保证永久零漏日。公开仓库连续 60 天没有活动时，定时工作流也可能被停用；可在 Actions 页面重新启用。贡献图更新可能需要 24 小时。
+| Project | What it explores | Start here |
+| --- | --- | --- |
+| **[J-GameLQA](https://github.com/liguozheng-ac/j-gamelqa)** | Chinese-to-Japanese game localization QA, combining rule checks with context-aware LLM evaluation. | [Local demo](https://github.com/liguozheng-ac/j-gamelqa/blob/main/docs/local_demo.md) · [Evaluation](https://github.com/liguozheng-ac/j-gamelqa/blob/main/docs/heldout_evaluation_results.md) |
+| **[J-SpeechOps](https://github.com/liguozheng-ac/j-speechops)** | Japanese speech data QC: generation, pronunciation evidence, human review, and release gates. | [Architecture](https://github.com/liguozheng-ac/j-speechops/blob/main/docs/architecture_overview.md) · [Example flow](https://github.com/liguozheng-ac/j-speechops/blob/main/examples/release_flow/README.md) |
+| **[Japanese Speech X-Ray](https://github.com/liguozheng-ac/japanese-speech-xray)** | Waveform, pitch, and intonation inspection, with experimental speech alignment and descriptive reference comparisons. | [Product showcase](https://github.com/liguozheng-ac/japanese-speech-xray#product-showcase) · [Reproduction guide](https://github.com/liguozheng-ac/japanese-speech-xray/blob/main/docs/REPRODUCIBILITY.md) |
 
-本地运行（Node.js 20 或更高版本）：
+These are prototypes and research-oriented tools. Each repository documents its validation scope, reproduction steps, and limitations.
 
-```sh
-node scripts/daily-snapshot.mjs
-```
+### How I approach quality
 
-只生成实际运行当天的快照，不回填历史日期。
+- Use deterministic rules for technical constraints and model-assisted checks for context-dependent questions.
+- Keep measured evidence, model predictions, and human approval separate.
+- Make experiments reproducible, preserve failure cases, and state uncertainty explicitly.
+
+**Tools used across these projects:** Python · FastAPI · Pydantic · Streamlit · Ollama / Qwen · librosa / pYIN · GitHub Actions
+
+### Project activity
+
+<!-- PROJECT-ACTIVITY:START -->
+Snapshot captured **2026-10-22 01:26** (Asia/Shanghai).
+
+| Project | Latest commit date | Commit |
+| --- | --- | --- |
+| [J-GameLQA](https://github.com/liguozheng-ac/j-gamelqa) | 2026-10-16 | [`89a53c5`](https://github.com/liguozheng-ac/j-gamelqa/commit/89a53c597ed07aafab548cc8de76b7021b906f6b) |
+| [J-SpeechOps](https://github.com/liguozheng-ac/j-speechops) | 2026-10-16 | [`b9dc139`](https://github.com/liguozheng-ac/j-speechops/commit/b9dc139d535bd1232a05a6fe7b9e1f6efc4dcbd0) |
+| [Japanese Speech X-Ray](https://github.com/liguozheng-ac/japanese-speech-xray) | 2026-10-16 | [`0e41af0`](https://github.com/liguozheng-ac/japanese-speech-xray/commit/0e41af07e50d6abe3c357ac3e843b341a7289813) |
+
+[Snapshot details](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/snapshots/2026/10/2026-10-22.json) · [Snapshot archive](https://github.com/liguozheng-ac/liguozheng-ac/tree/main/snapshots)
+<!-- PROJECT-ACTIVITY:END -->
+
+*This section is updated automatically from public repository metadata. Snapshot commits are automated maintenance, not a record of daily manual coding. [How updates work](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/docs/automation.md).*
