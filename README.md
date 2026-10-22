@@ -38,4 +38,4 @@ Snapshot captured **2026-10-22 01:26** (Asia/Shanghai).
 [Snapshot details](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/snapshots/2026/10/2026-10-22.json) · [Snapshot archive](https://github.com/liguozheng-ac/liguozheng-ac/tree/main/snapshots)
 <!-- PROJECT-ACTIVITY:END -->
 
-*This section is updated automatically from public repository metadata. Snapshot commits are automated maintenance, not a record of daily manual coding. [How updates work](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/docs/automation.md).*
+*Automatic updates are paused. The table above shows an archived snapshot of public repository metadata. Further updates are made manually on request; snapshots do not represent daily manual coding. [Update notes](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/docs/automation.md).*
