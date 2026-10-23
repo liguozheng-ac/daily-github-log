@@ -27,7 +27,7 @@ These are prototypes and research-oriented tools. Each repository documents its 
 ### Project activity
 
 <!-- PROJECT-ACTIVITY:START -->
-Snapshot captured **2026-10-22 01:26** (Asia/Shanghai).
+Snapshot captured **2026-10-23 19:59** (Asia/Shanghai).
 
 | Project | Latest commit date | Commit |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ Snapshot captured **2026-10-22 01:26** (Asia/Shanghai).
 | [J-SpeechOps](https://github.com/liguozheng-ac/j-speechops) | 2026-10-16 | [`b9dc139`](https://github.com/liguozheng-ac/j-speechops/commit/b9dc139d535bd1232a05a6fe7b9e1f6efc4dcbd0) |
 | [Japanese Speech X-Ray](https://github.com/liguozheng-ac/japanese-speech-xray) | 2026-10-16 | [`0e41af0`](https://github.com/liguozheng-ac/japanese-speech-xray/commit/0e41af07e50d6abe3c357ac3e843b341a7289813) |
 
-[Snapshot details](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/snapshots/2026/10/2026-10-22.json) · [Snapshot archive](https://github.com/liguozheng-ac/liguozheng-ac/tree/main/snapshots)
+[Snapshot details](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/snapshots/2026/10/2026-10-23.json) · [Snapshot archive](https://github.com/liguozheng-ac/liguozheng-ac/tree/main/snapshots)
 <!-- PROJECT-ACTIVITY:END -->
 
 *Automatic updates are paused. The table above shows an archived snapshot of public repository metadata. Further updates are made manually on request; snapshots do not represent daily manual coding. [Update notes](https://github.com/liguozheng-ac/liguozheng-ac/blob/main/docs/automation.md).*
